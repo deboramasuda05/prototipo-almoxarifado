@@ -1,0 +1,22 @@
+# Pastas de dependências (são grandes, não precisa subir)
+/vendor/
+
+# Arquivos de log
+*.log
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos temporários
+/tmp/
+/cache/
+
+# Configurações locais (com senhas)
+.env
+config.local.php
+
+# Backups
+*.zip
+*.rar
+*.bak

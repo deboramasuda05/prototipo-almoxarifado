@@ -1,37 +1,58 @@
 # Sistema de Gestão de Estoque - Almoxarifado
 
-Sistema para controle de empréstimos de equipamentos audiovisuais.
+Sistema web para controle de empréstimos de equipamentos audiovisuais desenvolvido como Projeto Integrador da UNIVESP.
 
-## 🎯 Funcionalidades
+## 🎯 Sobre o Projeto
 
-- Cadastro de equipamentos
-- Controle de empréstimos
-- Gestão de devoluções
-- Relatórios
+Este sistema foi desenvolvido para solucionar um problema real de um almoxarifado que ainda realizava o controle de empréstimos de forma manual, utilizando cadernos e formulários de papel. A solução digitaliza todo o processo, trazendo:
 
-## 🛠️ Tecnologias
+- ✅ Maior agilidade no registro de empréstimos
+- ✅ Controle preciso do estoque em tempo real
+- ✅ Redução de erros humanos
+- ✅ Histórico completo de todas as transações
+- ✅ Segurança das informações armazenadas
 
-- PHP
-- MySQL
-- HTML/CSS/JavaScript
+## 🛠️ Tecnologias Utilizadas
 
-## 📦 Como instalar
+| Tecnologia | Descrição |
+|------------|-----------|
+| **PHP** | Backend e lógica do sistema |
+| **MySQL** | Banco de dados relacional |
+| **JavaScript** | Interatividade da interface |
+| **CSS3** | Estilização e layout responsivo |
+| **HTML5** | Estrutura das páginas |
+| **Git/GitHub** | Versionamento do código |
 
-### 1. Configure o banco de dados
-- Crie um banco de dados no MySQL
-- Importe o arquivo `almoxcn (1).sql`
+## 🚀 Funcionalidades
 
-### 2. Configure o sistema
-- Ajuste as credenciais do banco na pasta `configuration/`
-- Coloque os arquivos no servidor (XAMPP/WAMP)
+### 👥 Usuários
+- Cadastro e gerenciamento de usuários
+- Autenticação segura (login/senha)
+- Diferentes níveis de acesso (administrador, operador)
 
-### 3. Acesse
-- Abra o navegador e acesse a pasta `public/`
+### 📟 Equipamentos
+- Cadastro completo de equipamentos
+- Controle de quantidade em estoque
+- Categorização por tipo (câmeras, áudio, acessórios, etc.)
+- Edição e exclusão de itens
 
-## 👥 Autores
+### 📤 Empréstimos
+- Registro rápido de empréstimos
+- Seleção de usuário solicitante
+- Controle de quantidades disponíveis
+- Registro de devoluções
 
-Projeto Integrador UNIVESP - 2025
+### 🔍 Consultas
+- Histórico completo de empréstimos
+- Busca por usuário, equipamento ou data
+- Equipamentos disponíveis para empréstimo
 
-**Polo:** Cachoeira Paulista, Potim, Bananal, São Sebastião
+## 📋 Pré-requisitos
 
-**Orientador:** Henrique Afonso da Cunha de Sousa
+Para executar este sistema localmente, você precisará de:
+
+- **PHP** 7.4 ou superior
+- **MySQL** 5.7 ou superior
+- **Apache** (recomendado via XAMPP/WAMP)
+- **Composer** (para gerenciar dependências)
+

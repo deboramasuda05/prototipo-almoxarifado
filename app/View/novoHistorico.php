@@ -14,7 +14,7 @@ include 'header.php';
         </div>
 
         <!-- Formulário -->
-        <form action="../action/novoHistoricoEquipamento.php" method="POST">
+        <form action="../Action/novoHistoricoEquipamento.php" method="POST">
             <input type="hidden" name="id" value="<?= (isset($_GET['id'])) ? htmlspecialchars($_GET['id']) : "" ?>">
 
             <div class="row g-4">

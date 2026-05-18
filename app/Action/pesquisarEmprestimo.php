@@ -1,6 +1,6 @@
 <?php
 
-include(dirname(__DIR__, 1).'/controller/emprestimoController.php');
+include(dirname(__DIR__, 1).'/Controller/emprestimoController.php');
 
 
 	$codEmprestimo = "";

@@ -1,7 +1,7 @@
 <?php
 
 
-include(dirname(__DIR__, 1).DIRECTORY_SEPARATOR.'Model'.DIRECTORY_SEPARATOR.'solicitacaoModel.php');
+include(dirname(__DIR__, 1). DIRECTORY_SEPARATOR.'Model'. DIRECTORY_SEPARATOR.'solicitacaoModel.php');
 
 
  	
@@ -12,7 +12,7 @@ include(dirname(__DIR__, 1).DIRECTORY_SEPARATOR.'Model'.DIRECTORY_SEPARATOR.'sol
 		function listarSolicitacoes($id_usuario=null){
 			$solicitacaoModel = new solicitacaoModel();			
 			$resultado = $solicitacaoModel->listarSolicitacoesModel($id_usuario);
-			include dirname(__DIR__).'/view/solicitacoes.php';		
+			include dirname(__DIR__, 1). '/View/solicitacoes.php';		
 		}
 
 
@@ -25,7 +25,7 @@ include(dirname(__DIR__, 1).DIRECTORY_SEPARATOR.'Model'.DIRECTORY_SEPARATOR.'sol
 			}else{				
 				session_start();
 				$_SESSION['msg'] = "Solicitado com sucesso";
-				include dirname(__DIR__) . '/View/solicitarEmprestimo.php';
+				include dirname(__DIR__, 1). '/View/solicitarEmprestimo.php';
     			exit();	
 			}
 		}
@@ -36,7 +36,7 @@ include(dirname(__DIR__, 1).DIRECTORY_SEPARATOR.'Model'.DIRECTORY_SEPARATOR.'sol
 			$id = intval($id);
 			$solicitacaoModel = new solicitacaoModel();
 			$resultado = $solicitacaoModel->entrarSolicitacaoModel($id);
-			include dirname(__DIR__).'/View/entrarSolicitacao.php';
+			include dirname(__DIR__, 1). '/View/entrarSolicitacao.php';
 		}
 
 		function deletarSolicitacao($id=null){
@@ -51,7 +51,7 @@ include(dirname(__DIR__, 1).DIRECTORY_SEPARATOR.'Model'.DIRECTORY_SEPARATOR.'sol
 			}	
 			
 			$_SESSION['msg'] = "Deletado com sucesso";
-			include(dirname(__DIR__, 1).'/view/solicitacoes.php');	
+			include(dirname(__DIR__, 1). '/View/solicitacoes.php');	
 			
 		}
 

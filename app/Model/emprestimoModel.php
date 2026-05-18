@@ -22,7 +22,7 @@
 
 
 			
-			$query = "INSERT INTO EMPRESTIMOS (SOLICITANTE, nome_equipamento, codigo_de_barras, DATA_EMPRESTIMO, CPF_SOLICITANTE, id_emprestimo, data_inicio_emprestimo, data_fim_emprestimo, destino, atividade) VALUES ('$nome_solicitante', '$nome_equipamento', '$codigoDeBarras', '$data_do_emprestimo', '$cpfSolicitante', '$id_emprestimo', '$data_inicio', '$data_fim', '$destino', '$nome_atividade')";				 
+			$query = "INSERT INTO emprestimos (solicitante, nome_equipamento, codigo_de_barras, data_emprestimo, cpf_solicitante, id_emprestimo, data_inicio_emprestimo, data_fim_emprestimo, destino, atividade) VALUES ('$nome_solicitante', '$nome_equipamento', '$codigoDeBarras', '$data_do_emprestimo', '$cpfSolicitante', '$id_emprestimo', '$data_inicio', '$data_fim', '$destino', '$nome_atividade')";				 
 			$resultado = $this->executaQuery($query);
 			
 			// Esse trecho é utilizado quando o emprestimo é feito via solicitação	
@@ -99,7 +99,7 @@
 
 			foreach (array_keys($equipamentos) as $i) {	        
 	        
-		        $query = "INSERT INTO EMPRESTIMOS (solicitante, nome_equipamento, codigo_de_barras, DATA_EMPRESTIMO, CPF_SOLICITANTE, id_emprestimo, data_inicio_emprestimo, data_fim_emprestimo, atividade, destino) VALUES ('$solicitante', '$nome_equipamento[$i]', '$equipamentos[$i]', '$data_do_emprestimo', '$cpf_solicitante', '$id_emprestimo', '$data_inicio_emprestimo', '$data_fim_emprestimo', '$nome_atividade', '$destino')";		
+		        $query = "INSERT INTO emprestimos (solicitante, nome_equipamento, codigo_de_barras, data_emprestimo, cpf_solicitante, id_emprestimo, data_inicio_emprestimo, data_fim_emprestimo, atividade, destino) VALUES ('$solicitante', '$nome_equipamento[$i]', '$equipamentos[$i]', '$data_do_emprestimo', '$cpf_solicitante', '$id_emprestimo', '$data_inicio_emprestimo', '$data_fim_emprestimo', '$nome_atividade', '$destino')";		
 		        		 
 				$resultado = $this->executaQuery($query);
 			}

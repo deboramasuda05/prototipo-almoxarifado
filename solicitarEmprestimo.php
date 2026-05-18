@@ -1,6 +1,6 @@
 <?php
 
-include(dirname(__DIR__, 1).'/controller/solicitacaoController.php');
+include(dirname(__DIR__, 1).'/Controller/solicitacaoController.php');
 
 	
 

@@ -17,7 +17,7 @@ include(dirname(__DIR__, 1).DIRECTORY_SEPARATOR.'Model'.DIRECTORY_SEPARATOR.'emp
 			if(empty($resultado)){
 				return false;
 			}elseif(!empty($resultado) && !isset($solicitacao) && empty($solicitacao)){
-				header("Location: ../view/emprestimo.php?msg=Emprestimo realizado com sucesso");
+				header("Location: ../View/emprestimo.php?msg=Emprestimo realizado com sucesso");
     			exit();	
 			}else{
 				$_SESSION['msg'] = "Emprestimo criado com sucesso";	
@@ -35,7 +35,7 @@ include(dirname(__DIR__, 1).DIRECTORY_SEPARATOR.'Model'.DIRECTORY_SEPARATOR.'emp
 				$resultado = $emprestimoModel->pesquisaEmprestimoModel($emprestimo);
 			}
 
-			include(dirname(__DIR__, 1).'/view/pesquisarEmprestimo.php');
+			include(dirname(__DIR__, 1).'/View/pesquisarEmprestimo.php');
 			
 		}
 
@@ -44,7 +44,7 @@ include(dirname(__DIR__, 1).DIRECTORY_SEPARATOR.'Model'.DIRECTORY_SEPARATOR.'emp
 			$resultado = $emprestimoModel->listarEmprestimoModel();
 			
 
-			include(dirname(__DIR__, 1).'/view/pesquisarEmprestimo.php');
+			include(dirname(__DIR__, 1).'/View/pesquisarEmprestimo.php');
 		}
 
 		function buscaUltimoRegistro(){
@@ -57,7 +57,7 @@ include(dirname(__DIR__, 1).DIRECTORY_SEPARATOR.'Model'.DIRECTORY_SEPARATOR.'emp
 			$emprestimoModel = new emprestimoModel();
 			$resultado = $emprestimoModel->editarEmprestimoModel($id_emprestimo);
 
-			include(dirname(__DIR__, 1).'/view/editarEmprestimo.php');
+			include(dirname(__DIR__, 1).'/View/editarEmprestimo.php');
 		}
 
 		function updateEmprestimo($solicitante=null, $cpf_solicitante=null, $id_emprestimo=null, $nome_equipamento=null, $data_inicio_emprestimo=null, $data_fim_emprestimo=null, $equipamentos=null, $nome_atividade=null, $destino=null){
@@ -66,7 +66,7 @@ include(dirname(__DIR__, 1).DIRECTORY_SEPARATOR.'Model'.DIRECTORY_SEPARATOR.'emp
 
 			$resultado = $emprestimoModel->editarEmprestimoModel($id_emprestimo);
 
-			include(dirname(__DIR__, 1).'/view/editarEmprestimo.php');
+			include(dirname(__DIR__, 1).'/View/editarEmprestimo.php');
 		}
 
 
@@ -81,7 +81,7 @@ include(dirname(__DIR__, 1).DIRECTORY_SEPARATOR.'Model'.DIRECTORY_SEPARATOR.'emp
 			}	
 			session_start();
 			$_SESSION['msg'] = "Deletado com sucesso";
-			include(dirname(__DIR__, 1).'/view/pesquisarEmprestimo.php');	
+			include(dirname(__DIR__, 1).'/View/pesquisarEmprestimo.php');	
 			
 		}
 

@@ -18,13 +18,13 @@
 			$resultado = $atividade->novaAtividadeModel($nome_atividade, $destino, $data_inicio_emprestimo, $data_fim_emprestimo, $hora_inicio_emprestimo, $hora_fim_emprestimo, $frequencia, $equipamentos, $nome_equipamentos, $solicitante, $cpf_solicitante);
 			session_start();
 			$_SESSION['msg'] = "Atividade criada com sucesso";
-			include dirname(__DIR__).'/view/novaAtividade.php';		
+			include dirname(__DIR__, 1).'/View/novaAtividade.php';		
 		}
 
 		function listarAtividade(){
 			$atividade = new atividadeModel();
 			$resultado = $atividade->listarAtividadeModel();
-			include dirname(__DIR__).'/view/atividades.php';		
+			include dirname(__DIR__, 1).'/View/atividades.php';		
 		}
 
 		function excluirAtividade($id_atividade=null){
@@ -36,14 +36,14 @@
 				$resultado = $atividade->listarAtividadeModel();
 			}	
 			$_SESSION['msg'] = "Deletado com sucesso";
-			include(dirname(__DIR__, 1).'/view/atividades.php');	
+			include(dirname(__DIR__, 1).'/View/atividades.php');	
 			
 		}
 
 		function editarAtividade($id_atividade=null){
 			$atividade = new atividadeModel();
 			$resultado = $atividade->editarAtividadeModel($id_atividade);
-			include dirname(__DIR__).'/view/editarAtividade.php';		
+			include dirname(__DIR__, 1).'/View/editarAtividade.php';		
 
 		}
 

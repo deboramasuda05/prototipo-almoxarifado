@@ -1,6 +1,6 @@
 <?php
 
-	include dirname(__DIR__, 2).DIRECTORY_SEPARATOR.'configuration'.DIRECTORY_SEPARATOR.'connect.php';
+	include dirname(__DIR__, 2). DIRECTORY_SEPARATOR.'configuration'. DIRECTORY_SEPARATOR.'connect.php';
 
 	class solicitacaoModel{		
 		
@@ -71,19 +71,19 @@
 			$data_fim = date('Y-m-d H:i:s', strtotime(str_replace('/', '-', $data_fim)));
 			$status = "Pendente";
 
-		    $query_solicitacao = "INSERT INTO SOLICITACAO (data_inicio_emprestimo, data_fim_emprestimo, id_usuarios, nome_atividade, destino, status, observacao) 
+		    $query_solicitacao = "INSERT INTO solicitacao (data_inicio_emprestimo, data_fim_emprestimo, id_usuarios, nome_atividade, destino, status, observacao) 
 		                          VALUES ('$data_inicio', '$data_fim', '$solicitante', '$nome_atividade', '$destino', '$status', '$observacao')";
 		    
 		    $resultado_solicitacao = $this->executaQuery($query_solicitacao);
 
 		    if ($resultado_solicitacao) {
-		        $query = "SELECT id FROM SOLICITACAO order by id desc LIMIT 1";	
+		        $query = "SELECT id FROM solicitacao order by id desc LIMIT 1";	
 		        $id_solicitacao = $this->executaQuery($query); 
 		        $id_solicitacao = $id_solicitacao[0]['id'];
 		        
 		        // Inserir os equipamentos na tabela SOLICITACAO_EQUIPAMENTO
 		        foreach ($equipamentos as $equipamento_id) {
-		            $query_equipamento = "INSERT INTO SOLICITACAO_EQUIPAMENTO (id_solicitacao, id_equipamento) 
+		            $query_equipamento = "INSERT INTO solicitacao_equipamento (id_solicitacao, id_equipamento) 
 		                                  VALUES ('$id_solicitacao', '$equipamento_id')";
 		            $resultado_equipamento = $this->executaQuery($query_equipamento);
 		            
@@ -133,7 +133,7 @@
 		}
 
 		function deletarSolicitacaoModel($id=null){
-			$query = "DELETE FROM SOLICITACAO WHERE id = {$id}";		
+			$query = "DELETE FROM solicitacao WHERE id = {$id}";		
 			$resultado = $this->executaQuery($query);
 			return $resultado;
 

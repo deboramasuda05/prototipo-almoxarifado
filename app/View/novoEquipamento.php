@@ -14,7 +14,7 @@ include 'header.php';
         </div>
 
         <!-- Formulário -->
-        <form action="../action/novoEquipamento.php" method="POST">
+        <form action="../Action/novoEquipamento.php" method="POST">
 
             <div class="row g-4">
 

@@ -16,9 +16,12 @@ if (!isset($_SESSION['user_id'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Almox</title>
-
+	<link rel="icon" type="image/png" href="../Imagem/logo.png">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../style/bootstrap.min.css">
+    
+    <link href="../style/acessibilidade.css" rel="stylesheet">
+
 
     <!-- jQuery -->
     <script src="../scripts/jquery-3.6.0.min.js"></script>
@@ -103,6 +106,12 @@ if (!isset($_SESSION['user_id'])) {
                     </li>
                     <?php
                     if(isset($_SESSION['perfil']) ){
+                        //Adicionei o dashboard para Adminitrador e Almoxerife
+                            if($_SESSION['perfil'] == 'Administrador'){
+                            echo'<li class="nav-item">
+                                  <a class="nav-link" href="../Action/dashboardAction.php">Dashboard</a>
+                                </li>';
+                            }
                             if($_SESSION['perfil'] == 'Administrador'){
                             echo '<li class="nav-item">
                                     <a class="nav-link" href="../Action/usuarios.php">Usuários</a>
@@ -117,6 +126,7 @@ if (!isset($_SESSION['user_id'])) {
                 <a href="../View/logout.php" class="btn btn-danger btn-sm">Sair</a>
             </div>
         </div>
+        <?php include 'acessibilidade.php'; ?>
     </nav>
 </body>
 

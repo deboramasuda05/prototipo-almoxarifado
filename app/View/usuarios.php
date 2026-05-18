@@ -2,7 +2,7 @@
 
     if(isset($_SESSION['perfil'])){
         if($_SESSION['perfil'] != 'Administrador' && $_SESSION['perfil'] != 'Almoxerife'){
-            header("refresh:1;url=../view/acessoNegado.php");
+            header("refresh:1;url=../View/acessoNegado.php");
             exit;     
         }
     }
@@ -21,7 +21,7 @@ include 'header.php';
         <h2 class="mb-4 text-center fw-bold">
     📋 Lista de Usuários
         </h2>
-        <a href="../view/novoUsuario.php" class="btn btn-success mb-3">+ Criar Novo</a>
+        <a href="../View/novoUsuario.php" class="btn btn-success mb-3">+ Criar Novo</a>
         <table class="table table-bordered">
             <thead>
                 <tr>

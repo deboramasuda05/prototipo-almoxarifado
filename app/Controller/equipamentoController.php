@@ -14,7 +14,7 @@ include(dirname(__DIR__, 1).DIRECTORY_SEPARATOR.'Model'.DIRECTORY_SEPARATOR.'equ
 			}
 			$equipamentos = new equipamentoModel();
 			$resultado = $equipamentos->listarEquipamentosModel($pesquisa);
-			include(dirname(__DIR__, 1).'/view/equipamentos.php');	
+			include(dirname(__DIR__, 1).'/View/equipamentos.php');	
 			
 		}
 
@@ -27,7 +27,7 @@ include(dirname(__DIR__, 1).DIRECTORY_SEPARATOR.'Model'.DIRECTORY_SEPARATOR.'equ
 				$resultado = $equipamento->editarEquipamentoModel($id);
 				session_start();
 			    $_SESSION['msg'] = "Alteração realizada com sucesso";
-				include(dirname(__DIR__, 1).'/view/editarEquipamento.php');	
+				include(dirname(__DIR__, 1).'/View/editarEquipamento.php');	
 			}
 			
 		}
@@ -36,7 +36,7 @@ include(dirname(__DIR__, 1).DIRECTORY_SEPARATOR.'Model'.DIRECTORY_SEPARATOR.'equ
 		
 			$equipamento = new equipamentoModel();
 			$resultado = $equipamento->editarEquipamentoModel($id);
-			include(dirname(__DIR__, 1).'/view/editarEquipamento.php');		
+			include(dirname(__DIR__, 1).'/View/editarEquipamento.php');		
 			
 		}
 
@@ -46,9 +46,9 @@ include(dirname(__DIR__, 1).DIRECTORY_SEPARATOR.'Model'.DIRECTORY_SEPARATOR.'equ
 			$resultado = $equipamento->historicoEquipamentoModel($id);
 			if($resultado==false){
 				$id;
-				include dirname(__DIR__).'/view/historicoEquipamento.php';	
+				include dirname(__DIR__, 1).'/View/historicoEquipamento.php';	
 			}else{
-				include dirname(__DIR__).'/view/historicoEquipamento.php';	
+				include dirname(__DIR__, 1).'/View/historicoEquipamento.php';	
 			}		
 		}
 
@@ -56,7 +56,7 @@ include(dirname(__DIR__, 1).DIRECTORY_SEPARATOR.'Model'.DIRECTORY_SEPARATOR.'equ
 
 			$equipamento = new equipamentoModel();
 			$resultado = $equipamento->editarHistoricoEquipamentoModel($id);
-			include dirname(__DIR__).'/view/editarHistoricoEquipamento.php';		
+			include dirname(__DIR__, 1).'/View/editarHistoricoEquipamento.php';		
 		}
 
 		function updateHistoricoEquipamento($id=null, $descricao=null, $data_manutencao=null, $responsavel=null, $custo=null){
@@ -66,7 +66,7 @@ include(dirname(__DIR__, 1).DIRECTORY_SEPARATOR.'Model'.DIRECTORY_SEPARATOR.'equ
 				$resultado = $equipamento->editarHistoricoEquipamentoModel($id);
 				session_start();
 				$_SESSION['msg'] = "Alteração realizada com sucesso";
-				include dirname(__DIR__).'/view/editarHistoricoEquipamento.php';
+				include dirname(__DIR__, 1).'/view/editarHistoricoEquipamento.php';
 			}		
 		}
 
@@ -82,7 +82,7 @@ include(dirname(__DIR__, 1).DIRECTORY_SEPARATOR.'Model'.DIRECTORY_SEPARATOR.'equ
 			}	
 			session_start();
 			$_SESSION['msg'] = "Deletado com sucesso";
-			include(dirname(__DIR__, 1).'/view/equipamentos.php');	
+			include(dirname(__DIR__, 1).'/View/equipamentos.php');	
 			
 		}
 
@@ -94,7 +94,7 @@ include(dirname(__DIR__, 1).DIRECTORY_SEPARATOR.'Model'.DIRECTORY_SEPARATOR.'equ
 			$resultado = null;
 			session_start();
 			$_SESSION['msg'] = "Deletado com sucesso";
-			include(dirname(__DIR__, 1).'/view/equipamentos.php');	
+			include(dirname(__DIR__, 1).'/View/equipamentos.php');	
 
 		}
 
@@ -104,7 +104,7 @@ include(dirname(__DIR__, 1).DIRECTORY_SEPARATOR.'Model'.DIRECTORY_SEPARATOR.'equ
 			$resultado = $equipamento->inserirEquipamentoModel($codigo_de_barras, $nome_equipamento, $tipo);
 			session_start();
 			$_SESSION['msg'] = "Inserido com sucesso";
-			include dirname(__DIR__).'/view/novoEquipamento.php';		
+			include dirname(__DIR__, 1).'/View/novoEquipamento.php';		
 		}
 
 		function inserirHistoricoEquipamento($id=null, $descricao=null, $data_manutencao=null, $responsavel=null, $custo=null){
@@ -113,7 +113,7 @@ include(dirname(__DIR__, 1).DIRECTORY_SEPARATOR.'Model'.DIRECTORY_SEPARATOR.'equ
 			$resultado = $equipamento->inserirHistoricoEquipamentoModel($id, $descricao, $data_manutencao, $responsavel, $custo);
 			session_start();
 			$_SESSION['msg'] = "Inserido com sucesso";
-			include dirname(__DIR__).'/view/novoHistorico.php';		
+			include dirname(__DIR__, 1).'/View/novoHistorico.php';		
 		}
 
 

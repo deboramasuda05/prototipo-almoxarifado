@@ -1,3 +1,3 @@
-<?php
+ <?php
 
-header('location: ./app/view/index.php');	
+header('location: ./app/View/index.php');

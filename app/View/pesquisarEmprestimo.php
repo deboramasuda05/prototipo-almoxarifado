@@ -51,7 +51,7 @@ $emprestimos = '';
 <h2 class="mt-5 mb-4 text-center fw-bold">📋 Pesquisa de Empréstimo</h2>
 
 
-	<form method="post" action="../action/pesquisarEmprestimo.php">
+	<form method="post" action="../Action/pesquisarEmprestimo.php">
 
 		<div class="input-group mb-3 col-5 mt-6">
 	        <input type="text" name="cod_emprestimo" id="searchBox" class="form-control "  placeholder="Pesquisar por Número, Solicitante, Data, Destino ou Atividade">

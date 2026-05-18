@@ -106,7 +106,7 @@
 		    $codigo_de_barras = "'" . $codigo_de_barras . "'";
 		    $nome_equipamento = "'" . $nome_equipamento . "'";
 		    $tipo = "'" . $tipo . "'";
-		    $status = "'disponível'";
+		    $status = "'Disponível'";
 
 		    $query = "INSERT INTO equipamento (codigoDeBarra, nome, tipo, status) 
 		              VALUES ({$codigo_de_barras}, {$nome_equipamento}, {$tipo}, {$status})";

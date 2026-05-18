@@ -3,7 +3,7 @@
     if(isset($_SESSION['perfil'])){
         if($_SESSION['perfil'] != 'Administrador' && $_SESSION['perfil'] != 'Almoxerife'){
 
-            header("refresh:1;url=../view/acessoNegado.php");
+            header("refresh:1;url=../View/acessoNegado.php");
             exit;     
         }
     }

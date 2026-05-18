@@ -13,3 +13,5 @@ include(dirname(__DIR__, 1).DIRECTORY_SEPARATOR.'Controller'.DIRECTORY_SEPARATOR
 	}else{
 		include(dirname(__DIR__, 1).'/view/index.php');
 	}
+
+

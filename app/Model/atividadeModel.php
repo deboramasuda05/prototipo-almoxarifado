@@ -12,7 +12,7 @@
 			return $resultado;
 		}
 
-		function novaAtividadeModel($nome_atividade=null, $destino=null, $data_inicio_emprestimo=null, $data_fim_emprestimo=null, $hora_inicio_emprestimo=null, $hora_fim_emprestimo=null, $frequencia=null, $equipamentos=null, $nome_equipamentos=null, $solicitante=null, $cpf_solicitante=null){
+		function novaatividadeModel($nome_atividade=null, $destino=null, $data_inicio_emprestimo=null, $data_fim_emprestimo=null, $hora_inicio_emprestimo=null, $hora_fim_emprestimo=null, $frequencia=null, $equipamentos=null, $nome_equipamentos=null, $solicitante=null, $cpf_solicitante=null){
 
 			// Converte as strings para o formato Y-m-d H:i:s
 			$data_inicio = date('Y-m-d H:i:s', strtotime(str_replace('/', '-', $data_inicio_emprestimo.' '.$hora_inicio_emprestimo. ':00')));
@@ -26,7 +26,7 @@
 
 			//var_dump($data_inicio); exit;
 
-			$query = "INSERT INTO ATIVIDADE (nome_atividade, destino, data_inicio_emprestimo, data_fim_emprestimo, frequencia) VALUES ('$nome_atividade', '$destino', '$data_inicio', '$data_fim', '$frequencia')";					 
+			$query = "INSERT INTO atividade (nome_atividade, destino, data_inicio_emprestimo, data_fim_emprestimo, frequencia) VALUES ('$nome_atividade', '$destino', '$data_inicio', '$data_fim', '$frequencia')";					 
 			$resultado = $this->executaQuery($query);
 
 				if($frequencia != '8'){
@@ -57,7 +57,7 @@
 						$data_in = $datas_encontradas[$i] . ' ' . $hora_inicio_emprestimo . ':00';
 						$data_out = $datas_encontradas[$i] . ' ' . $hora_fim_emprestimo . ':00';
 		
-						$query = "INSERT INTO EMPRESTIMOS (solicitante, nome_equipamento, codigo_de_barras, DATA_EMPRESTIMO, CPF_SOLICITANTE, id_emprestimo, data_inicio_emprestimo, data_fim_emprestimo, destino, atividade) VALUES ('$solicitante', '$nome_equipamento', '$equipamento', '$data_do_emprestimo', '$cpf_solicitante', '$id_emprestimo', '$data_in', '$data_out', '$destino', '$nome_atividade')";	
+						$query = "INSERT INTO emprestimos (solicitante, nome_equipamento, codigo_de_barras, data_emprestimo, cpf_solicitante, id_emprestimo, data_inicio_emprestimo, data_fim_emprestimo, destino, atividade) VALUES ('$solicitante', '$nome_equipamento', '$equipamento', '$data_do_emprestimo', '$cpf_solicitante', '$id_emprestimo', '$data_in', '$data_out', '$destino', '$nome_atividade')";	
 
 						$resultado = $this->executaQuery($query);
 					}
@@ -70,7 +70,7 @@
 						$equipamento = intval($equipamentos[$i]);
 						$nome_equipamento = $nome_equipamentos[$i];
 		
-						$query = "INSERT INTO EMPRESTIMOS (solicitante, nome_equipamento, codigo_de_barras, DATA_EMPRESTIMO, CPF_SOLICITANTE, id_emprestimo, data_inicio_emprestimo, data_fim_emprestimo, destino, atividade) VALUES ('$solicitante', '$nome_equipamento', '$equipamento', '$data_do_emprestimo', '$cpf_solicitante', '$id_emprestimo', '$data_inicio', '$data_fim', '$destino', '$nome_atividade')";	
+						$query = "INSERT INTO EMPRESTIMOS (solicitante, nome_equipamento, codigo_de_barras, data_emprestimo, cpf_solicitante,, id_emprestimo, data_inicio_emprestimo, data_fim_emprestimo, destino, atividade) VALUES ('$solicitante', '$nome_equipamento', '$equipamento', '$data_do_emprestimo', '$cpf_solicitante', '$id_emprestimo', '$data_inicio', '$data_fim', '$destino', '$nome_atividade')";	
 
 
 						$resultado = $this->executaQuery($query);
@@ -95,19 +95,19 @@
 		}
 
 
-		function listarAtividadeModel(){
+		function listaratividadeModel(){
 				$query = "SELECT * FROM atividade";		
 				$resultado = $this->executaQuery($query);
 				return $resultado;
 		}
 
-		function excluirAtividadeModel($id_atividade=null){		
+		function excluiratividadeModel($id_atividade=null){		
 			$query = "DELETE FROM atividade WHERE id = {$id_atividade}";		
 			$resultado = $this->executaQuery($query);
 			return $resultado;
 		}
 
-		function editarAtividadeModel($id_atividade=null){
+		function editaratividadeModel($id_atividade=null){
 			$query = "SELECT * FROM atividade where id = {$id_atividade}";		
 			$resultado = $this->executaQuery($query);
 			return $resultado;

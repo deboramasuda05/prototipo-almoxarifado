@@ -6,8 +6,10 @@
     <meta name="author" content="">
 
     <title>Login - Almoxarifado</title>
-
+	<link rel="icon" type="image/png" href="../Imagem/logo.png">
     <link href="../style/bootstrap.min.css" rel="stylesheet">
+    <link href="../style/acessibilidade.css" rel="stylesheet">
+
     <script src="../View/jquery-3.6.0.min.js"></script>
     <script src="../View/bootstrap.bundle.min.js"></script>
 
@@ -92,5 +94,6 @@
         <p class="mt-4 mb-3 text-muted text-center">&copy; 2025-2030</p>
       </form>
     </div>
+    <?php include 'acessibilidade.php'; ?>
   </body>
 </html>

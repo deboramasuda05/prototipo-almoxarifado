@@ -21,7 +21,7 @@ if($id){
 
 <div class="container mt-5">
 
-    <a class="text-decoration-none mp-5" href="../view/novoHistorico.php?id=<?=$id?>"><button type="button" class="btn btn-primary float-end">Novo Histórico</button> </a>   
+    <a class="text-decoration-none mp-5" href="../View/novoHistorico.php?id=<?=$id?>"><button type="button" class="btn btn-primary float-end">Novo Histórico</button> </a>   
 
     <h2 class="mb-4">Histórico de Manutenções -  <?= (isset($resultado[0]['nome']) && !is_null($resultado[0]['nome'])) ? $resultado[0]['nome'] : ""  ?></h2>
 

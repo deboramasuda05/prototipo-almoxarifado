@@ -19,7 +19,7 @@ include 'header.php';
 <div class="container mt-5">
     <h2 class="mt-5 mb-4 text-center fw-bold">📋 Lista de Equipamentos</h2>
     <?php if ($_SESSION['perfil'] == 'Administrador' || $_SESSION['perfil'] == 'Almoxerife'){ ?>
-    <a class="text-decoration-none mp-3 mt-4" href="../view/novoEquipamento.php"><button type="button" class="btn btn-success mb-3">+ Novo Equipamento</button> </a>
+    <a class="text-decoration-none mp-3 mt-4" href="../View/novoEquipamento.php"><button type="button" class="btn btn-success mb-3">+ Novo Equipamento</button> </a>
     <?php } ?>
     <form action="../Action/listarEquipamentos.php" method="POST">
     <!-- Campo  mt-2 Pesquisa -->

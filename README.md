@@ -82,16 +82,16 @@ emprestimos	Registro de todas as transações
 categorias	Classificação dos equipamentos
 
 
-👨‍💻 Equipe de Desenvolvimento
-Nome	
-André Silva dos Santos
-Claudio Massao Kawata
-Débora Masuda Alves
-Iago Ramon Camargo Rodrigues
-Jefferson Câmara Silva	
-Jonathan Vinícius de Oliveira Ferreira
-Mauro Gopfert Cetrone
-Paulo César Masuda Alves	
+👨‍💻 Equipe de Desenvolvimento: 
+
+André Silva dos Santos,
+Claudio Massao Kawata,
+Débora Masuda Alves,
+Iago Ramon Camargo Rodrigues,
+Jefferson Câmara Silva,	
+Jonathan Vinícius de Oliveira Ferreira,
+Mauro Gopfert Cetrone,
+Paulo César Masuda Alves,	
 Orientadora: Isadora Tonscheis da Fonseca
 
 🏫 Instituição
